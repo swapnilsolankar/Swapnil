@@ -1,0 +1,93 @@
+1.
+Product_details=[]
+Supplier_details=dict()
+Customer_details=[]
+gender={}
+
+
+fp1=open("Sales.csv","r")
+data=fp1.readline
+
+while(True):
+
+  data=fp1.readline()
+  if not data:
+    break;
+
+  #print(data)
+  #data=data.replace("\n","")
+  temp=data.split(",")
+  Product_details.append(temp[1])
+  Customer_details.append(temp[3])
+  Supplier_details.update({temp[0]:temp[3]})
+  gender.update({temp[3]:temp[4]})  
+
+fp1.close()
+
+Customer_details=tuple(Customer_details)
+print(type(Customer_details))
+print("\nProduct detail\n",Product_details,end="")
+print("\n\nCustomer detail\n",Customer_details,end="")
+print("\n\nsupplier detail\n",Supplier_details,end="")
+print("\n\nGender detail\n",gender,end="")
+2.
+frequency = {}
+# interating over the list
+for item in Supplier_details.values():
+  #checking the elements in dictionary
+  if item in frequency:
+    #incrementing the counter
+    frequency[item]+=1
+    #initialising the counter
+  else:
+    frequency[item]=1
+#priniting the frequency
+print(frequency)
+marklist = sorted(frequency.items(), key=lambda x:x[1],reverse=True)
+sortdict = dict(marklist)
+print(sortdict)
+print("\n\nThe most populer Supplier for sales ", list(sortdict.keys())[0],"sold",list(sortdict.values())[0],"times")
+3.
+frequency = {}
+# interating over the list
+for item in gender:
+  #checking the elements in dictionary
+  if item in frequency:
+    #incrementing the counter
+    frequency[item]+=1
+    #initialising the counter
+  else:
+    frequency[item]=1
+#priniting the frequency
+print(frequency)
+marklist = sorted(frequency.items(), key=lambda x:x[1],reverse=True)
+sortdict = dict(marklist)
+print(sortdict)
+print("\n\nThe most populer Custemer for sales ", list(sortdict.keys())[0],"sold",list(sortdict.values())[0],"times")
+4.
+Product_details=[]
+Supplier_details=dict()
+Customer_details=[]
+gender={}
+
+
+fp1=open("sales.csv","r")
+data=fp1.readline()
+
+while(True):
+
+  data=fp1.readline()
+  if not data:
+    break;
+
+  #print(data)
+  #data=data.replace("\n","")
+  temp=data.split(",")
+  Product_details.append(temp[1])
+  Customer_details.append(temp[3])
+  Supplier_details.update({temp[0]:temp[2]})
+  gender.update({temp[3]:temp[4]})  
+fp1.close()
+
+Customer_details=tuple(Customer_details)
+print(type(Customer_details))
