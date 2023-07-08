@@ -1,0 +1,39 @@
+import pandas as pd
+
+a=[20,46,10]
+
+myvar =pd.Series(a)
+
+print(myvar)
+import pandas as pd
+
+a=[20,46,10]
+
+myvar=pd.Series(a,index=["x","y","z"])
+print(myvar)
+import pandas as pd
+
+result={"sic":55,"am":60,"eds":66}
+sr = pd.Series(result)
+print(sr)
+import pandas as pd
+
+result={"sic":55,"am":60,"eds":66}
+sr = pd.Series(result,index=["sic","eds","am"])
+print(sr)
+import pandas as pd
+data={
+    "Course":["SIC","DT","AM","ENG"],
+    "Credits":[4,3,2,1]
+}
+
+df=pd.DataFrame(data)
+print(df)
+import pandas as pd
+data={
+    "Course":["SIC","DT","AM","ENG"],
+    "Credits":[4,3,2,1]
+}
+
+df=pd.DataFrame(data)
+print(df)
