@@ -1,0 +1,15 @@
+import pandas as pd
+df=pd.read_csv('/content/stud2.csv')
+print(df.to_string())
+import pandas as pd
+df=pd.read_json('/content/sampleJSON.js')
+print(df.to_string())
+import pandas as pd
+df=pd.read_json('/content/sampleJSON.js')
+print(df.head(10))
+import pandas as pd
+df=pd.read_csv('/content/housing (1).csv')
+print(df.to_string())
+import pandas as pd
+df=pd.read_csv('/content/1686715083343_all_data.csv')
+print(df.to_string())
