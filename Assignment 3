@@ -1,0 +1,96 @@
+# Find statistical analysis of Employee Records
+f = open("/content/emp.csv","r")
+
+contents = f.read()
+
+lines = contents.split("\n")
+
+eid = []; nm = []; desgn = []; sal = [];
+
+for l in lines:
+    words = l.split(",")
+    print(words)
+    eid.append(int(words[0]))
+    nm.append(words[1])
+    desgn.append(words[2])
+    sal.append(int(words[3]))
+
+print("Employee IDs:",eid)
+print("Employee Names:",nm)
+print("Employee DEsignations:",desgn)
+print("Employee Salary:",sal)
+               
+               
+#Max Salary
+print("Maximum Salary:", max(sal))
+
+#Min Salary
+print("Minimum Salary:", min(sal))
+#Average Salary
+print("Average Salary:", sum(sal)/len(sal))
+
+#Total Salary
+print("Total Salary:", sum(sal))
+
+#Employee whose Salary is maximum
+print("Employee Name whose salary is maximum", nm[sal.index(max(sal))])
+
+#Employee whose Designation is Manager
+print("Employee Name whose designation is manager",end=" ")
+for i in range(len(desgn)):
+    if desgn[i] == "Manager" or desgn[i] == "manager":
+        print(nm[i], end= " ")
+
+#Employee whose salary is 95000
+print("Employee Name whose salary is 95000 : ", nm[sal.index(95000)])
+
+#Employee whose Salary is minimum
+print("\nEmployee Name whose salary is minimum :", nm[sal.index(min(sal))])
+
+#Employee whose Designation is Sr. Manager
+print("Employee Name whose designation is Sr. Manager",end=" ")
+for i in range(len(desgn)):
+    if desgn[i] == "Sr. Manager" or desgn[i] == "Sr. manager":
+        print(nm[i], end= " ")
+
+f = 0
+#Employee whose salary is 80000
+for i in range(len(sal)):
+    if sal[i] == 70000:
+        print("\nEmployee Name whose salary is 70000:",nm[i])
+        f = 1
+if(f == 0):
+    print("\nNo any Employee present whose salary is 70000")
+2.
+f1=open("emp.csv","r")
+f2=open("sal.csv","r")
+
+f3=open("emp_sal.csv","w")
+
+content1=f1.read()
+content2=f2.read()
+
+name=[]
+sal=[]
+
+lines1=content1.split("\n")
+lines2=content2.split("\n")
+
+for l1 in lines1:
+  words1=l1.split(",")
+
+  for l2 in lines2:
+    words2=l2.split(",")
+    if(words1[0] == words2[0]):
+      l1= l1 + "," +words2[3]+ "," +words2[1] + "\n"
+      f3.write(l1)
+      name.append(words1[3])
+      sal.append(int(words2[1]))
+      print(l1)
+
+f1.close()
+f2.close()
+f3.close()
+
+print(name)
+print(sal)
