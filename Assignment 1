@@ -1,0 +1,24 @@
+1.
+lst=[10,20,30]
+l1=[2.7,5.7]
+l2=["prathamesh","om","rohan"]
+l3=[361,"swapnil",95.6]
+print(lst)
+print(l1)
+print(l2)
+print(l3)
+2.
+l=[10,2,5,10,10,20]
+print(l[ :5])
+print(l[2: ])
+print(l[1:4])
+3.
+l1=[3,8,5,9,3,6,8]
+l1.append(15)
+print(l1)
+l2=["om","rohan","swapnil"]
+l2.append("prathamesh")
+print(l2)
+l1.pop(3)
+l2.remove("om")
+l1.index(4)
