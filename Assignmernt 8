@@ -1,0 +1,36 @@
+import matplotlib.pyplot as plt
+x=[1,2,3,4,5]
+y=[10,15,30,12,9]
+plt.plot(x,y,marker='o')
+plt.title("line chart example")
+plt.xlabel("Time")
+plt.ylabel("Dependant variable")
+plt.show()
+import matplotlib.pyplot as plt
+import numpy as np
+x=np.random.normal(170,100,250)
+plt.hist(x)
+plt.show()
+import matplotlib.pyplot as plt
+import numpy as np
+x=np.random.normal(170,100,250)
+print(x)
+plt.hist(x)
+plt.show()
+import matplotlib.pyplot as plt
+import numpy as np
+x=np.array([5,7,8,3,4,6,7,8,9])
+y=np.array([23,56,7,89,34,12,36,22,34])
+plt.scatter(x,y)
+plt.show()
+import matplotlib.pyplot as plt
+import numpy as np
+x=np.array([0,1,2,3])
+y=np.array([3,8,1,10])
+plt.subplot(2,1,1)
+plt.plot(x,y)
+x=np.array([0,1,2,3])
+y=np.array([3,8,1,10])
+plt.subplot(2,1,1)
+plt.plot(x,y)
+plt.show()
