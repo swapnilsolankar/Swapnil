@@ -1,0 +1,32 @@
+sal=list()
+title=list()
+sal_usd=list()
+emp_type=list()
+experience=list()
+
+
+f=open("company1.csv","r")
+data=f.readline()
+while(True):
+
+  data=f.readline()
+  if not data:
+    break;
+  print(data)
+  #data=data.replace("\n","")
+  temp=data.split(",")
+  sal.append(int(temp[4]))
+  title.append(temp[3])
+  sal_usd.append(int(temp[5]))
+  emp_type.append(temp[2])
+  experience.append(temp[1])
+frequency ={}
+for emp in emp_type:
+  if emp in frequency:
+    frequency[emp]+=1
+  else:
+    frequency[emp]=1
+print(frequency,"\n\n")
+
+
+print(frequency['Part'],"employees are part time employeees")
