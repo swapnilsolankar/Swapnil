@@ -1,0 +1,91 @@
+# Read dataset from a CSV file
+dataset = np.genfromtxt('stud2.csv', delimiter=',')
+
+print(dataset)
+# 1. Perform all matrix operations
+# Example matrix multiplication
+matrix_mult = np.dot(dataset, dataset.T)
+
+# 2. Horizontal and vertical stacking of Numpy Arrays
+# Example horizontal stacking
+horizontal_stack = np.hstack((dataset, dataset))
+
+# Example vertical stacking
+vertical_stack = np.vstack((dataset, dataset))
+
+# 3. Custom sequence generation
+# Example arange
+custom_sequence = np.arange(10)
+
+# 4. Arithmetic and Statistical Operations, Mathematical Operations, Bitwise Operators
+# Example mean
+mean = np.mean(dataset)
+
+# Example element-wise multiplication
+element_wise_mult = dataset * 2
+# Example bitwise AND
+#bitwise_and = np.bitwise_and(dataset, 3)
+
+# 5. Copying and viewing arrays
+# Example array copy
+array_copy = np.copy(dataset)
+
+# Example array view
+array_view = dataset.view()
+
+# 6. Data Stacking, Searching, Sorting, Counting, Broadcasting
+# Example horizontal stacking
+stacked_data = np.hstack((dataset, dataset))
+
+# Example searching
+indices = np.where(dataset > 0)
+
+# Example sorting
+sorted_data = np.sort(dataset)
+
+# Example counting
+count = np.count_nonzero(dataset > 0)
+# Example broadcasting
+broadcasted_data = dataset + 5
+
+# Print the results
+print("Matrix multiplication:")
+print(matrix_mult)
+
+print("Horizontal stacking:")
+print(horizontal_stack)
+
+print("Vertical stacking:")
+print(vertical_stack)
+
+print("Custom sequence generation:")
+print(custom_sequence)
+
+print("Mean:")
+print(mean)
+
+print("Element-wise multiplication:")
+print(element_wise_mult)
+
+print("Bitwise AND:")
+#print(bitwise_and)
+
+print("Array copy:")
+print(array_copy)
+
+print("Array view:")
+print(array_view)
+
+print("Stacked data:")
+print(stacked_data)
+
+print("Indices where the condition is met:")
+print(indices)
+
+print("Sorted data:")
+print(sorted_data)
+
+print("Count of elements satisfying the condition:")
+print(count)
+print("Broadcasted data:")
+print(broadcasted_data)
