@@ -1,0 +1,49 @@
+1.start = int(input("Enter the start of range: "))
+end = int(input("Enter the end of range: "))
+
+
+for num in range(start, end + 1):
+
+    
+    if num % 2 == 0:
+        print(num, end=" ")
+2.
+f = open("file1","w")
+f.write(input())
+f.close()
+f = open("file1","r")
+print(f.read(20))
+print(f.readline())
+f.close
+3.
+f1=open("emp.csv","r")
+f1=open("sal.csv","r")
+
+f3=open("emp_sal.csv","w")
+
+content1=f1.read()
+content2=f2.read()
+
+name=[]
+sal=[]
+
+lines1=content1.split("\n")
+lines2=content2.split("\n")
+
+for l1 in lines1:
+   words1=l1.split(",")
+
+   for l2 in lines2:
+     words2=l2.split(",")
+     if(words1[0]==words2[0]):
+       l1=l1 +","+ words2[1] +","+ words2[2] + "\n"
+       f3.write(l1)
+       name.append(word1[1])
+       sal.append(int(words2[2]))
+       print(l1)
+f1.close()
+f2.close()
+f3.close()
+
+print(name)
+print(sal)
